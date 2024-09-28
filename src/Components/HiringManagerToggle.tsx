@@ -5,7 +5,7 @@ import { HiringManagerContext } from "./HiringManagerContext";
 const HiringManagerToggle = () => {
     const context = useContext(HiringManagerContext);
     if (!context) {
-        throw new Error('HiringManagerToggle must be used within a HiringManagerContextProvider');
+        throw new Error('HiringManagerContext must be used within a HiringManagerContextProvider');
     }
     const { isHiringManager, setIsHiringManager } = context;
 

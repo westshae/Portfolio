@@ -3,7 +3,7 @@ import { HiringManagerContext } from './HiringManagerContext';
 import { Container } from '@mui/material';
 
 
-const ShowHiringManagerContent: FC<{ children: ReactNode }> = ({ children }) => {
+const HideHiringManagerContent: FC<{ children: ReactNode }> = ({ children }) => {
 
     const context = useContext(HiringManagerContext);
     if (!context) {
@@ -13,7 +13,7 @@ const ShowHiringManagerContent: FC<{ children: ReactNode }> = ({ children }) => 
 
     return (
         <>
-            {isHiringManager ? (
+            {!isHiringManager ? (
                 <Container>
                     {children}
                 </Container>
@@ -22,4 +22,4 @@ const ShowHiringManagerContent: FC<{ children: ReactNode }> = ({ children }) => 
     );
 };
 
-export { ShowHiringManagerContent };
+export { HideHiringManagerContent };
