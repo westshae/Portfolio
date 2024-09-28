@@ -3,7 +3,7 @@ import { ThemeProvider } from '@emotion/react';
 import { theme } from './Components/Theme';
 import { CssBaseline } from '@mui/material';
 import LandingPage from './Pages/LandingPage';
-import { HiringManagerContext, HiringManagerContextProvider } from './Components/HiringManagerContext';
+import { HiringManagerContext, HiringManagerContextProvider } from './Components/HiringManagerDisplay/HiringManagerContext';
 
 
 const App = () => {
