@@ -4,6 +4,7 @@ import { theme } from './Components/Theme';
 import { CssBaseline } from '@mui/material';
 import LandingPage from './Pages/LandingPage';
 import { HiringManagerContextProvider } from './Components/HiringManagerDisplay/HiringManagerContext';
+import WebgamePage from './Pages/Webgame';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/webgame" element={<WebgamePage />} />
           </Routes>
         </Router>
       </HiringManagerContextProvider>

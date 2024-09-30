@@ -4,31 +4,14 @@ import HiringManagerToggle from '../Components/HiringManagerDisplay/HiringManage
 import { ShowHiringManagerContent } from '../Components/HiringManagerDisplay/ShowHiringManagerContent';
 import { HideHiringManagerContent } from '../Components/HiringManagerDisplay/HideHiringManagerContent';
 import ImageGallery from '../Components/ImageGallery';
-
-const mockImageList = [
-    'image.png',
-    'image.png',
-    'image.png',
-    'image.png',
-    'image.png',
-    'image.png',
-    'image.png',
-    'image.png',
-]
+import { ProjectsGrid } from '../Components/ProjectsGrid/ProjectsGrid';
 
 const LandingPage: FC = () => {
     const theme = useTheme();
 
     return (
         <Container>
-            <HiringManagerToggle />
-            <ShowHiringManagerContent>
-                <Typography variant='h6'>Content only for hiring manager</Typography>
-            </ShowHiringManagerContent>
-            <HideHiringManagerContent>
-                <Typography variant='h6'>Alt-content for non-hiring managers</Typography>
-            </HideHiringManagerContent>
-            <ImageGallery images={mockImageList} />
+            <ProjectsGrid/>
         </Container>
     );
 };
