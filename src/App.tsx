@@ -3,8 +3,8 @@ import { ThemeProvider } from '@emotion/react';
 import { theme } from './Components/Theme';
 import { CssBaseline } from '@mui/material';
 import LandingPage from './Pages/LandingPage';
-import { HiringManagerContextProvider } from './Components/HiringManagerDisplay/HiringManagerContext';
 import WebgamePage from './Pages/Webgame';
+import { NerdContextProvider } from './Components/NerdDisplay/NerdContext';
 
 
 const App = () => {
@@ -12,14 +12,14 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <HiringManagerContextProvider>
+      <NerdContextProvider>
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/webgame" element={<WebgamePage />} />
           </Routes>
         </Router>
-      </HiringManagerContextProvider>
+      </NerdContextProvider>
     </ThemeProvider>
   );
 }

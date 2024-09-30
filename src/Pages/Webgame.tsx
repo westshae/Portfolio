@@ -1,9 +1,8 @@
 import { Container, Typography, useTheme } from '@mui/material';
 import { useState, useCallback, FC } from 'react';
-import HiringManagerToggle from '../Components/HiringManagerDisplay/HiringManagerToggle';
-import { ShowHiringManagerContent } from '../Components/HiringManagerDisplay/ShowHiringManagerContent';
-import { HideHiringManagerContent } from '../Components/HiringManagerDisplay/HideHiringManagerContent';
 import ImageGallery from '../Components/ImageGallery';
+import Header from '../Components/Header';
+import { ShowNerdContent } from '../Components/NerdDisplay/NerdContent';
 
 const mockImageList = [
     'image.png',
@@ -21,15 +20,14 @@ const WebgamePage: FC = () => {
 
     return (
         <Container>
-            <HiringManagerToggle />
+            <Header />
             <Typography variant='h1'>Webgame Project</Typography>
 
-            <ShowHiringManagerContent>
-                <Typography variant='h6'>Here's some content for hiring managers</Typography>
-            </ShowHiringManagerContent>
-            <HideHiringManagerContent>
-                <Typography variant='h6'>Here's some content for non-hiring managers</Typography>
-            </HideHiringManagerContent>
+            <ShowNerdContent>
+                <Typography variant='h6'>Here's some nerd content</Typography>
+            </ShowNerdContent>
+            
+            <Typography variant='h6'>Here's some normal content</Typography>
 
             <ImageGallery images={mockImageList} />
         </Container>

@@ -1,16 +1,14 @@
-import { Container, Typography, useTheme } from '@mui/material';
-import { useState, useCallback, FC } from 'react';
-import HiringManagerToggle from '../Components/HiringManagerDisplay/HiringManagerToggle';
-import { ShowHiringManagerContent } from '../Components/HiringManagerDisplay/ShowHiringManagerContent';
-import { HideHiringManagerContent } from '../Components/HiringManagerDisplay/HideHiringManagerContent';
-import ImageGallery from '../Components/ImageGallery';
-import { ProjectsGrid } from '../Components/ProjectsGrid/ProjectsGrid';
+import { Container, useTheme } from '@mui/material';
+import { FC } from 'react';
+import { ProjectsGrid } from '../Components/ProjectsGrid';
+import Header from '../Components/Header';
 
 const LandingPage: FC = () => {
     const theme = useTheme();
 
     return (
         <Container>
+            <Header />
             <ProjectsGrid/>
         </Container>
     );
