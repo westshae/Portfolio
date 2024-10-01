@@ -32,6 +32,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, date }) => {
                         width: '100%',
                         height: imageHeight && imageHeight < window.innerHeight * 0.5 ? 'auto' : '50vh',
                         maxHeight: '50vh',
+                        objectPosition: 'top left',
                         objectFit: 'cover',
                         borderRadius: 'inherit'
                     }}
