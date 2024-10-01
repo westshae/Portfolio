@@ -15,23 +15,10 @@ const NerdToggle = () => { // Updated component name
                 Hide Nerd Stuff?
             </Typography>
             <Switch 
+                color="secondary"
                 checked={isNerd} // Updated state reference
                 onChange={() => setIsNerd(!isNerd)} // Updated setter reference
                 size="small"
-                sx={{
-                    '&.Mui-checked': {
-                        color: 'green',
-                    },
-                    '&.Mui-checked + .MuiSwitch-track': {
-                        backgroundColor: 'green',
-                    },
-                    '& .MuiSwitch-thumb': {
-                        backgroundColor: isNerd ? 'green' : 'red',
-                    },
-                    '& + .MuiSwitch-track': {
-                        backgroundColor: 'red',
-                    },
-                }}
             />
         </Box>
     );

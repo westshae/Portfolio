@@ -35,9 +35,7 @@ const Header = () => {
           </Typography>
         </div>
 
-        {/* Right Side: Contact Dropdown */}
         <HiringManagerToggle />
-
         <div>
           <IconButton 
             color="inherit" 

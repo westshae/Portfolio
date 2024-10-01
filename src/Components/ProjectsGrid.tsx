@@ -63,7 +63,7 @@ const ProjectsGrid: FC = () => {
                                     alt={project.name}
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
+                                    <Typography gutterBottom variant="h5" component="div" color="text.secondary">
                                         {project.name}
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
