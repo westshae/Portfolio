@@ -3,10 +3,11 @@ import { Card, CardContent, Typography, Box } from '@mui/material';
 
 interface TextCardProps {
     header?: string;
+    date: string;
     children: React.ReactNode; // Use children prop for content
 }
 
-const TextCard: React.FC<TextCardProps> = ({ header, children }) => {
+const TextCard: React.FC<TextCardProps> = ({ header, date, children }) => {
     return (
         <Card sx={{ height: "100%", position: "relative" }}>
             <CardContent>
@@ -28,7 +29,7 @@ const TextCard: React.FC<TextCardProps> = ({ header, children }) => {
                 }}
             >
                 <Typography variant="body1" color="text.secondary">
-                    10/10/12
+                    {date}
                 </Typography>
             </Box>
         </Card>

@@ -18,16 +18,10 @@ const WebgamePage: FC = () => {
                 <BlogCardHolder>
                     <HeaderCard header="WebGame Project" subtitle="A web-based multiplayer 4x strategy game." date="10/10/25" />
                     {!isMobile && <br />}
-                    <ImageCard src="image.png"/>
-                    <TextCard header="Header">
+                    <ImageCard src="image.png" date="10/10/25"/>
+                    <TextCard header="Header" date="10/10/25">
                         A bunch of text
                     </TextCard>
-
-                    <Typography variant='h1'>Webgame Project</Typography>
-                    <ShowNerdContent>
-                        <Typography variant='h6'>Here's some nerd content</Typography>
-                    </ShowNerdContent>
-                    <Typography variant='h6'>Here's some normal content</Typography>
                 </BlogCardHolder>
             </Container>
         </>

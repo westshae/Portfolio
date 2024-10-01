@@ -3,16 +3,17 @@ import { Box, Card, CardContent, styled, Typography } from '@mui/material';
 
 interface ImageCardProps {
     src: string;
+    date: string;
 }
 
-const StyledCardContent = styled(CardContent)(({ theme }) => ({
+const StyledCardContent = styled(CardContent)(() => ({
     padding: 0,
     "&:last-child": {
         paddingBottom: 0,
     },
 }));
 
-const ImageCard: React.FC<ImageCardProps> = ({ src }) => {
+const ImageCard: React.FC<ImageCardProps> = ({ src, date }) => {
     const [imageHeight, setImageHeight] = useState<number | null>(null);
 
     const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
@@ -44,7 +45,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src }) => {
                 }}
             >
                 <Typography variant="body1" color="text.secondary">
-                    10/10/12
+                    {date}
                 </Typography>
             </Box>
         </Card>
