@@ -3,7 +3,7 @@ import { Box, Card, CardContent, styled, Typography } from '@mui/material';
 
 interface ImageCardProps {
     src: string;
-    date: string;
+    date?: string;
 }
 
 const StyledCardContent = styled(CardContent)(() => ({
@@ -36,18 +36,20 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, date }) => {
                     }}
                 />
             </StyledCardContent>
-            <Box
-                sx={{
-                    position: 'absolute',
-                    bottom: 0,
-                    right: 0,
-                    p: 1,
-                }}
-            >
-                <Typography variant="body1" color="text.secondary">
-                    {date}
-                </Typography>
-            </Box>
+            {date &&
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        bottom: 0,
+                        right: 0,
+                        p: 1,
+                    }}
+                >
+                    <Typography variant="body1" color="text.secondary">
+                        {date}
+                    </Typography>
+                </Box>
+            }
         </Card>
     );
 };

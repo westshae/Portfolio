@@ -4,7 +4,7 @@ import { Card, CardContent, Typography } from '@mui/material';
 interface HeaderCardProps {
     header: string;
     subtitle: string;
-    date: string;
+    date?: string;
 }
 
 const HeaderCard: React.FC<HeaderCardProps> = ({ header, subtitle, date }) => {
@@ -17,10 +17,11 @@ const HeaderCard: React.FC<HeaderCardProps> = ({ header, subtitle, date }) => {
                 <Typography variant="subtitle1" color="text.secondary">
                     {subtitle}
                 </Typography>
-                <Typography variant="subtitle1" color="text.secondary">
-                    Last Updated: {date}
-                </Typography>
-
+                {date &&
+                    <Typography variant="subtitle1" color="text.secondary">
+                        Last Updated: {date}
+                    </Typography>
+                }
             </CardContent>
         </Card>
     );
