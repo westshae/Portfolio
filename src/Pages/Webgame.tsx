@@ -16,7 +16,7 @@ const WebgamePage: FC = () => {
             <Header />
             <Container>
                 <BlogCardHolder>
-                    <HeaderCard header="WebGame Project" subtitle="A web-based multiplayer 4x strategy game." />
+                    <HeaderCard header="WebGame Project" subtitle="A web-based multiplayer 4x strategy game." date="10/10/25" />
                     {!isMobile && <br />}
                     <ImageCard src="image.png"/>
                     <TextCard header="Header">

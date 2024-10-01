@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, styled } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Card, CardContent, styled, Typography } from '@mui/material';
 
 interface ImageCardProps {
     src: string;
 }
 
-const StyledCardContent = styled(CardContent)(({ theme }) => ({//This is used because card content has a 24px paddingBottom based on last child.
+const StyledCardContent = styled(CardContent)(({ theme }) => ({
     padding: 0,
     "&:last-child": {
         paddingBottom: 0,
     },
 }));
-
-
 
 const ImageCard: React.FC<ImageCardProps> = ({ src }) => {
     const [imageHeight, setImageHeight] = useState<number | null>(null);
@@ -22,7 +20,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src }) => {
     };
 
     return (
-        <Card sx={{ overflow: 'hidden' }}>
+        <Card sx={{ overflow: 'hidden', position: 'relative' }}>
             <StyledCardContent sx={{ p: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <img
                     src={src}
@@ -37,6 +35,18 @@ const ImageCard: React.FC<ImageCardProps> = ({ src }) => {
                     }}
                 />
             </StyledCardContent>
+            <Box
+                sx={{
+                    position: 'absolute',
+                    bottom: 0,
+                    right: 0,
+                    p: 1,
+                }}
+            >
+                <Typography variant="body1" color="text.secondary">
+                    10/10/12
+                </Typography>
+            </Box>
         </Card>
     );
 };
