@@ -6,9 +6,17 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const mockProjectData = [
-    { lastUpdated: "10/10/24", navigate: "webgame", name: "Webgame", blurb: "A webgame", tags: ["reactjs", "typescript", "gamedev"] },
-    { lastUpdated: "", navigate: "mobileapp", name: "MobileApp", blurb: "An android app", tags: ["reactnative", "typescript"] },
-    { lastUpdated: "", navigate: "desktopapp", name: "DesktopApp", blurb: "An electron app", tags: ["electron", "typescript", "gamedev"] }
+    { lastUpdated: "", navigate: "Portfolio", name: "Portfolio", blurb: "This website you're looking at.", tags: ["Typescript", "Javascript","Reactjs", "HTML", "CSS",  "Frontend", "Webdev"] },
+    { lastUpdated: "", navigate: "Drinkers-Game", name: "Drinkers' Game", blurb: "A challenge-based drinking game.", tags: ["Typescript", "Javascript", "HTML", "CSS", "Frontend", "Backend", "Fullstack", "NestJS", "ExpressJS", "Websocket", "Gamedev", "Webdev"] },
+    { lastUpdated: "", navigate: "Roots-of-Empires", name: "Roots of Empires", blurb: "A massively-replayable history strategy game.", tags: ["Godot", "GDScript", "Gamedev"] },
+    { lastUpdated: "", navigate: "Shaeo.org", name: "Shaeo.org", blurb: "A guided goal setting website.", tags: ["Typescript", "Javascript", "ReactJS", "HTML", "CSS", "Frontend", "Backend", "Fullstack", "Stripe", "Webdev"] },
+    { lastUpdated: "", navigate: "Website-Interactable-Element-Scraper", name: "Website-Interactable-Element-Scraper", blurb: "A scraping script to get website input elements, and make AI training data", tags: ["Javascript", "Puppeteer", "Scraping"] },
+    { lastUpdated: "", navigate: "webgame", name: "Webgame", blurb: "A massively multiplayer, web-based strategy game.", tags: ["Typescript", "Javascript", "PixiJS", "Angular", "HTML", "CSS", "Fullstack", "Frontend", "Backend", "Discord.JS", "PostgreSQL", "ExpressJS", "NestJS", "Webdev", "Gamedev"] },
+    { lastUpdated: "", navigate: "wareffects", name: "War Effects", blurb: "A minecraft plugin that simulates nuke/gas attacks.", tags: ["Java", "Minecraft", "Maven", "Gamedev"] },
+    { lastUpdated: "", navigate: "WorldQuests", name: "WorldQuests", blurb: "A minecraft plugin that creates dynamic quests.", tags: ["Java", "Minecraft", "Maven", "Gamedev"] },
+    { lastUpdated: "", navigate: "social-optim-scripts", name: "Social Optim Scripts", blurb: "Scripts that scrape YouTube for video data.", tags: ["Javascript", "Puppeteer", "Scraping"] },
+    { lastUpdated: "", navigate: "settlements", name: "Settlements", blurb: "A minecraft plugin that allows for democratic factions of players.", tags: ["Java", "Minecraft", "Maven", "Gamedev"] },
+
 ];
 
 const ProjectsGrid: FC = () => {
