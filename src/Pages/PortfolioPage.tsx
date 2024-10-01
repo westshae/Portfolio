@@ -43,7 +43,13 @@ const PortfolioPage: FC = () => {
                             For this project, I wanted it to be free to run, so I never had to think about shutting it down, and so I made it a frontend only.
                             More specifically, I'm using Typescript, ReactJS and MUI for a component library. 
                         </TextForCard>
-
+                    </TextCard>
+                    <TextCard header="The Landing Page" date="1/10/24">
+                        <TextForCard>
+                            The landing page has the following purposes. 1. It needs to inform the user who I am 2. It needs to inform the user the point of this site 
+                            3. It needs to show all my projects, at least a summary of each of them 4. The projects need to be easily filterable 5. It needs to have
+                            links on how to contact me.
+                        </TextForCard>
                     </TextCard>
                 </BlogCardHolder>
             </Box>
