@@ -1,6 +1,5 @@
 import { FC, ReactNode, useContext } from 'react';
 import { NerdContext } from './NerdContext'; // Updated context import
-import { Container } from '@mui/material';
 
 const ShowNerdContent: FC<{ children: ReactNode }> = ({ children }) => { // Updated component name
 
@@ -13,9 +12,9 @@ const ShowNerdContent: FC<{ children: ReactNode }> = ({ children }) => { // Upda
     return (
         <>
             {isNerd ? ( // Updated conditional
-                <Container>
+                <>
                     {children}
-                </Container>
+                </>
             ) : null}
         </>
     );

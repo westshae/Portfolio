@@ -26,7 +26,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
     }, [isOpen]);
 
     return (
-        <Container>
+        <>
             <img
                 src={images[0]}
                 alt="Gallery"
@@ -48,7 +48,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
                     ))}
                 </ImageList>
             )}
-        </Container>
+        </>
     );
 };
 

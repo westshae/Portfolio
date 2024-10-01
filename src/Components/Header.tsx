@@ -23,9 +23,8 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
-      <Toolbar>
-        {/* Left Side: Portfolio Title and Home Icon */} 
+    <AppBar position="static" sx={{width: "100vw"}}>
+      <Toolbar >
         <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
           <IconButton color="inherit" onClick={() => navigate('/')}>
             <HomeIcon />

@@ -10,17 +10,19 @@ import { NerdContextProvider } from './Components/NerdDisplay/NerdContext';
 const App = () => {
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <NerdContextProvider>
-        <Router>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/webgame" element={<WebgamePage />} />
-          </Routes>
-        </Router>
-      </NerdContextProvider>
-    </ThemeProvider>
+    <div style={{ maxWidth: '100vw', overflowX: 'hidden' }}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <NerdContextProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/webgame" element={<WebgamePage />} />
+            </Routes>
+          </Router>
+        </NerdContextProvider>
+      </ThemeProvider>
+    </div>
   );
 }
 

@@ -19,18 +19,20 @@ const WebgamePage: FC = () => {
     const theme = useTheme();
 
     return (
-        <Container>
+        <>
             <Header />
-            <Typography variant='h1'>Webgame Project</Typography>
+            <Container>
+                <Typography variant='h1'>Webgame Project</Typography>
 
-            <ShowNerdContent>
-                <Typography variant='h6'>Here's some nerd content</Typography>
-            </ShowNerdContent>
-            
-            <Typography variant='h6'>Here's some normal content</Typography>
+                <ShowNerdContent>
+                    <Typography variant='h6'>Here's some nerd content</Typography>
+                </ShowNerdContent>
 
-            <ImageGallery images={mockImageList} />
-        </Container>
+                <Typography variant='h6'>Here's some normal content</Typography>
+
+                <ImageGallery images={mockImageList} />
+            </Container>
+        </>
     );
 };
 

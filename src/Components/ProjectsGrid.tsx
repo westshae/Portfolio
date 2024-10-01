@@ -1,15 +1,18 @@
-import { FC, ReactNode, useState } from 'react';
-import { Box, Button, Card, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
+import { FC, useState } from 'react';
+import { Box, Card, CardContent, CardMedia, Fab, Grid, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const mockProjectData = [
     { navigate: "webgame", name: "Webgame", blurb: "A webgame", tags: ["reactjs", "typescript", "gamedev"] },
-    { navigate: "mobileapp", name: "MobileApp", blurb: "A android app", tags: ["reactnative", "typescript"] },
-    { navigate: "desktopapp", name: "DesktopApp", blurb: "A electron app", tags: ["electron", "typescript", "gamedev"] }
+    { navigate: "mobileapp", name: "MobileApp", blurb: "An android app", tags: ["reactnative", "typescript"] },
+    { navigate: "desktopapp", name: "DesktopApp", blurb: "An electron app", tags: ["electron", "typescript", "gamedev"] }
 ];
 
 const ProjectsGrid: FC = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const [activeTags, setActiveTags] = useState<string[]>([]);
 
     const allTags = Array.from(new Set(mockProjectData.flatMap(project => project.tags)));
@@ -21,37 +24,40 @@ const ProjectsGrid: FC = () => {
     };
 
     const handleResetTags = () => {
-        setActiveTags([])
-    }
+        setActiveTags([]);
+    };
 
     const filteredProjects = mockProjectData.filter(project =>
         activeTags.length === 0 || project.tags.some(tag => activeTags.includes(tag))
     );
 
     return (
-        <Container>
-            <Box>
+        <>
+            <Box sx={{ padding: "1rem 1rem 0.5rem 1rem" }}>
                 <Typography>Filter Tags</Typography>
                 {allTags.map(tag => (
-                    <Button
+                    <Fab
                         key={tag}
-                        variant={activeTags.includes(tag) ? "contained" : "outlined"}
+                        variant="extended"
+                        size="small"
+                        color="primary"
                         onClick={() => handleTagClick(tag)}
+                        sx={{ mx: "0.3rem" }}
                     >
                         {tag}
-                    </Button>
+                        {activeTags.includes(tag) ? (
+                            <RemoveIcon sx={{ ml: 1 }} />
+                        ) : (
+                            <AddIcon sx={{ ml: 1 }} />
+                        )}
+                    </Fab>
                 ))}
-                <Button
-                    key={"reset"}
-                    variant={activeTags.includes("reset") ? "contained" : "outlined"}
-                    onClick={() => handleResetTags()}
-                >
-                    reset tags
-                </Button>
-
+                <Fab key={"reset"} size="small" color="primary" onClick={() => handleResetTags()} sx={{ mx: "0.5rem" }}>
+                    <DeleteIcon />
+                </Fab>
             </Box>
 
-            <Box>
+            <Box sx={{ padding: "0.5rem 1rem 1rem 1rem" }}>
                 <Grid container spacing={2}>
                     {filteredProjects.map((project) => (
                         <Grid item xs={12} sm={6} md={4} key={project.navigate}>
@@ -78,7 +84,7 @@ const ProjectsGrid: FC = () => {
                     ))}
                 </Grid>
             </Box>
-        </Container>
+        </>
     );
 };
 
