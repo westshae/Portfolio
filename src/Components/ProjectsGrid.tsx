@@ -61,7 +61,16 @@ const ProjectsGrid: FC = () => {
                 <Grid container spacing={2}>
                     {filteredProjects.map((project) => (
                         <Grid item xs={12} sm={6} md={4} key={project.navigate}>
-                            <Card onClick={() => navigate(project.navigate)}>
+                            <Card 
+                                onClick={() => navigate(project.navigate)} 
+                                sx={{
+                                    transition: 'transform 0.2s, box-shadow 0.2s',
+                                    '&:hover': {
+                                        transform: 'scale(1.05)',
+                                        boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+                                    }
+                                }}
+                            >
                                 <CardMedia
                                     component="img"
                                     height="140"
