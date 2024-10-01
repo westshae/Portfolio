@@ -6,8 +6,6 @@ import { BlogCardHolder } from '../Components/BlogComponents/BlogCardHolder';
 import TextCard from '../Components/BlogComponents/TextCard';
 
 const LandingPage: FC = () => {
-    const theme = useTheme();
-
     return (
         <>
             <Header />
