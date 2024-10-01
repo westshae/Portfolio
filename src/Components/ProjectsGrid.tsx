@@ -6,9 +6,9 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const mockProjectData = [
-    { navigate: "webgame", name: "Webgame", blurb: "A webgame", tags: ["reactjs", "typescript", "gamedev"] },
-    { navigate: "mobileapp", name: "MobileApp", blurb: "An android app", tags: ["reactnative", "typescript"] },
-    { navigate: "desktopapp", name: "DesktopApp", blurb: "An electron app", tags: ["electron", "typescript", "gamedev"] }
+    { lastUpdated: "10/10/24", navigate: "webgame", name: "Webgame", blurb: "A webgame", tags: ["reactjs", "typescript", "gamedev"] },
+    { lastUpdated: "", navigate: "mobileapp", name: "MobileApp", blurb: "An android app", tags: ["reactnative", "typescript"] },
+    { lastUpdated: "", navigate: "desktopapp", name: "DesktopApp", blurb: "An electron app", tags: ["electron", "typescript", "gamedev"] }
 ];
 
 const ProjectsGrid: FC = () => {
@@ -60,15 +60,20 @@ const ProjectsGrid: FC = () => {
             <Box sx={{ padding: "0.5rem 1rem 1rem 1rem" }}>
                 <Grid container spacing={2}>
                     {filteredProjects.map((project) => (
-                        <Grid item xs={12} sm={6} md={4} key={project.navigate}>
-                            <Card 
-                                onClick={() => navigate(project.navigate)} 
+                        <Grid item xs={12} sm={6} md={4} key={project.name}>
+                            <Card
+                                onClick={() => {
+                                    if (project.navigate) {
+                                        navigate(project.navigate);
+                                    }
+                                }}
                                 sx={{
+                                    cursor: project.navigate ? 'pointer' : 'default',
                                     transition: 'transform 0.2s, box-shadow 0.2s',
-                                    '&:hover': {
+                                    '&:hover': project.navigate ? {
                                         transform: 'scale(1.05)',
                                         boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
-                                    }
+                                    } : {},
                                 }}
                             >
                                 <CardMedia
@@ -86,6 +91,9 @@ const ProjectsGrid: FC = () => {
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
                                         {project.tags.join(", ")}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {project.lastUpdated ? `Last Updated: ${project.lastUpdated}` : "Portfolio Page Incomplete"}
                                     </Typography>
                                 </CardContent>
                             </Card>

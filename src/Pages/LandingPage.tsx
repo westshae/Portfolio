@@ -10,7 +10,6 @@ const LandingPage: FC = () => {
         <>
             <Header />
             <Container>
-
                 <BlogCardHolder>
                     <TextCard header="Who am I?">
                         I'm Shae, and I've been coding self-taught since highschool, graduating from Victoria University of Wellington with a Computer Science degree.
@@ -20,7 +19,6 @@ const LandingPage: FC = () => {
                         Initially, the point of this site was to show off some of my projects, especially when some of them aren't easy to look at now. 
                         A good example is that some projects aren't hosted, and some have had breaking updates since I archived them.
                     </TextCard>
-
                 </BlogCardHolder>
             </Container>
 
