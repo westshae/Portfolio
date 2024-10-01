@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Card, CardContent, Typography, Box } from '@mui/material';
+import { HeaderForCard, TextForCard } from './BlogTypography';
 
 interface TextCardProps {
     header?: string;
@@ -12,13 +13,11 @@ const TextCard: React.FC<TextCardProps> = ({ header, date, children }) => {
         <Card sx={{ height: "100%", position: "relative" }}>
             <CardContent>
                 {header && (
-                    <Typography variant="h5" component="div" color="text.secondary">
+                    <HeaderForCard>
                         {header}
-                    </Typography>
+                    </HeaderForCard>
                 )}
-                <Typography variant="body1" color="text.secondary">
-                    {children}
-                </Typography>
+                {children}
             </CardContent>
             {date &&
                 <Box
@@ -29,9 +28,9 @@ const TextCard: React.FC<TextCardProps> = ({ header, date, children }) => {
                         p: 1,
                     }}
                 >
-                    <Typography variant="body1" color="text.secondary">
+                    <TextForCard>
                         {date}
-                    </Typography>
+                    </TextForCard>
                 </Box>
             }
         </Card>

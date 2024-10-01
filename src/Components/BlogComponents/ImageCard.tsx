@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Card, CardContent, styled, Typography } from '@mui/material';
+import { TextForCard } from './BlogTypography';
 
 interface ImageCardProps {
     src: string;
@@ -45,9 +46,9 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, date }) => {
                         p: 1,
                     }}
                 >
-                    <Typography variant="body1" color="text.secondary">
+                    <TextForCard>
                         {date}
-                    </Typography>
+                    </TextForCard>
                 </Box>
             }
         </Card>

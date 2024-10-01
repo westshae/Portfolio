@@ -7,7 +7,7 @@ import { BlogCardHolder } from '../Components/BlogComponents/BlogCardHolder';
 import ImageCard from '../Components/BlogComponents/ImageCard';
 import TextCard from '../Components/BlogComponents/TextCard';
 
-const WebgamePage: FC = () => {
+const Redirect: FC = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Check if the view is mobile
 
@@ -16,16 +16,11 @@ const WebgamePage: FC = () => {
             <Header />
             <Container>
                 <BlogCardHolder>
-                    <HeaderCard header="WebGame Project" subtitle="A web-based multiplayer 4x strategy game." date="10/10/25" />
-                    {!isMobile && <br />}
-                    <ImageCard src="image.png" date="10/10/25"/>
-                    <TextCard header="Header" date="10/10/25">
-                        A bunch of text
-                    </TextCard>
+                    <HeaderCard header="Incomplete Project Redirect" subtitle="Where you end up if I haven't added details on this project." date="1/10/2024" />
                 </BlogCardHolder>
             </Container>
         </>
     );
 };
 
-export default WebgamePage;
+export default Redirect;

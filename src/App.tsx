@@ -3,8 +3,9 @@ import { ThemeProvider } from '@emotion/react';
 import { theme } from './Components/Theme';
 import { CssBaseline } from '@mui/material';
 import LandingPage from './Pages/LandingPage';
-import WebgamePage from './Pages/Webgame';
+import Redirect from './Pages/Redirect';
 import { NerdContextProvider } from './Components/NerdDisplay/NerdContext';
+import PortfolioPage from './Pages/PortfolioPage';
 
 
 const App = () => {
@@ -17,7 +18,8 @@ const App = () => {
           <Router>
             <Routes>
               <Route path="/" element={<LandingPage />} />
-              <Route path="/webgame" element={<WebgamePage />} />
+              <Route path="/portfolio" element={<PortfolioPage />}/>
+              <Route path="*" element={<Redirect />} />
             </Routes>
           </Router>
         </NerdContextProvider>

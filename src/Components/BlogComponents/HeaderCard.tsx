@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
+import { HeaderForCard } from './BlogTypography';
 
 interface HeaderCardProps {
     header: string;
@@ -11,9 +12,9 @@ const HeaderCard: React.FC<HeaderCardProps> = ({ header, subtitle, date }) => {
     return (
         <Card>
             <CardContent>
-                <Typography variant="h5" component="div" color="text.secondary">
+                <HeaderForCard>
                     {header}
-                </Typography>
+                </HeaderForCard>
                 <Typography variant="subtitle1" color="text.secondary">
                     {subtitle}
                 </Typography>
